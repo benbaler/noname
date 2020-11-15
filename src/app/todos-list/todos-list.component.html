@@ -1,0 +1,11 @@
+<div *ngFor="let todo of todos | async; let i = index">
+  <span>{{todo.name}}</span>
+  <input type="checkbox" (click)="onCheck(i)">
+  <button (click)="onDelete(i)">Delete</button>
+  <hr>
+</div>
+
+<div>
+  <input type="text" name="todoName" #todo>
+  <button (click)="onAdd(todo.value)">Add</button>
+</div>
