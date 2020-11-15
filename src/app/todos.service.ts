@@ -20,6 +20,7 @@ export class TodosService {
 
   constructor() {
     this.todosObservable.subscribe(todos => {
+      console.log(todos);
       this.todos = todos;
     });
   }
